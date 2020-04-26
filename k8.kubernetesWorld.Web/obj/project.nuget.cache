@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/CGXF2fZwH+Rq+1fgK+XJyYSFwcw4ug7YhUFQIfmkush9JUfXh5U0nxuAzPzbOnlDqTJD1V7OOQbuOaDIG21oA==",
+  "success": true,
+  "projectFilePath": "C:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\k8.kubernetesWorld.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\askha\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512"
+  ],
+  "logs": []
+}
