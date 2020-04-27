@@ -20,8 +20,9 @@ docker rmi k8_employee:rc1 -f
 docker rm productservice -f
 docker rmi k8_products:rc1 -f
 
-docker rm testsrv -f
-docker rmi test:rc1 -f
+docker rm staffservice -f
+docker rmi k8_staff:rc1 -f
+docker rmi $(docker images -f “dangling=true” -q)  #remove all images with <none> 
 
 docker rm k8.kubernetesWorld.Service.Employee -f
 docker rmi k8kubernetesworldserviceemployee:dev -f  

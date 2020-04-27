@@ -11,29 +11,29 @@ docker inspect productservice -f "{{json .NetworkSettings.Networks }}"   # Produ
 docker inspect k8.kubernetesWorld.Service.Employee -f "{{json .NetworkSettings.Networks }}"   # Employee  VS debug 
 ######################Employee API DEPLOYMENT###################################
 
-cd C:\_dev\_github\k8.kubernetesWorld\k8.kubernetesWorld.Service.Employee
-docker build -t k8_employee:rc1 .
-docker run -d -p 8081:80  --name employeeservice k8_employee:rc1
-#Start-Process "http://localhost:8081/swagger"
-#docker network connect  product_network employeeservice 
+# cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Employee
+# docker build -t k8_employee:rc1 .
+# docker run -d -p 8081:80  --name employeeservice k8_employee:rc1
+# #Start-Process "http://localhost:8081/swagger"
+# docker network connect  product_network employeeservice 
 ###########################################################################
 ######################Product API DEPLOYMENT###########################
 
-cd C:\_dev\_github\k8.kubernetesWorld\k8.kubernetesWorld.Service.Product
+cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product
 docker build -t k8_product:rc1 .
 docker run -d -p 8082:80  --name productservice k8_product:rc1
 #Start-Process "http://localhost:8082/swagger"
 
-#docker network connect  product_network productservice  
+docker network connect  product_network productservice  
 ###########################################################################
 ######################Staff DEPLOYMENT###########################
 
-cd C:\_dev\_github\k8.kubernetesWorld\k8.kubernetesWorld.Service.Staff
+cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff
 docker build -t k8_staff:rc1 .
 docker run -d -p 8083:80  --name staffservice k8_staff:rc1
 #Start-Process "http://localhost:8083/WeatherForecast"
 
-#docker network connect  product_network testservice  
+docker network connect  product_network testservice  
 ###########################################################################
 ##############################Web DEPLOYMENT###############################
 
