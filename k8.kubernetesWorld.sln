@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "k8.kubernetesWorld.Web", "k8.kubernetesWorld.Web\k8.kubernetesWorld.Web.csproj", "{B85C872D-08B0-4882-ACBD-AE2B5EC5FABB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContainerArtifacts", "ContainerArtifacts", "{6F4F0168-E0C9-4F4D-A521-BA93599D7909}"
-	ProjectSection(SolutionItems) = preProject
-		ContainerArtifacts\DockerCommands.ps1 = ContainerArtifacts\DockerCommands.ps1
-		ContainerArtifacts\DockerProjectScript.ps1 = ContainerArtifacts\DockerProjectScript.ps1
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "k8.kubernetesWorld.Service.Product", "k8.kubernetesWorld.Service.Product\k8.kubernetesWorld.Service.Product.csproj", "{2FD93779-7839-4B31-A7FD-B35D4CA020B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "k8.kubernetesWorld.Service.Product", "k8.kubernetesWorld.Service.Product\k8.kubernetesWorld.Service.Product.csproj", "{2FD93779-7839-4B31-A7FD-B35D4CA020B7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "k8.kubernetesWorld.Service.Staff", "k8.kubernetesWorld.Service.Staff\k8.kubernetesWorld.Service.Staff.csproj", "{54EF4DBC-0B81-4CBF-AFAB-4477ED421429}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContainerArtifacts", "ContainerArtifacts", "{48B804F2-5B5C-4AD6-AF13-616EEFCF7549}"
+	ProjectSection(SolutionItems) = preProject
+		ContainerArtifacts\DockerCommands_V1.ps1 = ContainerArtifacts\DockerCommands_V1.ps1
+		ContainerArtifacts\DockerProjectScript_V1.ps1 = ContainerArtifacts\DockerProjectScript_V1.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -22,7 +22,13 @@ docker rmi k8_products:rc1 -f
 
 docker rm staffservice -f
 docker rmi k8_staff:rc1 -f
+
+docker rm web -f
+docker rmi k8_web:rc1 -f
 docker rmi $(docker images -f “dangling=true” -q)  #remove all images with <none> 
+
+docker rm sqlproduct -f  #SQL remove
+docker rm sqlemployee -f  #SQL remove
 
 docker rm k8.kubernetesWorld.Service.Employee -f
 docker rmi k8kubernetesworldserviceemployee:dev -f  

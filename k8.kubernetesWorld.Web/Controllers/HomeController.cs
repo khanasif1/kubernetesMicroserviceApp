@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using k8.kubernetesWorld.Web.Models;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace k8.kubernetesWorld.Web.Controllers
 {
@@ -18,15 +20,15 @@ namespace k8.kubernetesWorld.Web.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
+        public async Task<IActionResult> Index()
+        {      
             return View();
         }
 
         public IActionResult Privacy()
         {
             return View();
-        }
+        }        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

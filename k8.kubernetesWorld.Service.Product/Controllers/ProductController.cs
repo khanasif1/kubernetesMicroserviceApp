@@ -51,6 +51,12 @@ namespace k8.kubernetesWorld.Service.Product.Controllers
                         }
                     }
                 }
+                //_response = new List<EFModel.Product>() {
+                //    new EFModel.Product { ID = 1, Name = "Car", Description = "Ford", EnrollmentDate = DateTime.Now },
+                //    new EFModel.Product { ID = 1, Name = "Truck", Description = "Tesla", EnrollmentDate = DateTime.Now },
+                //    new EFModel.Product { ID = 1, Name = "Plane", Description = "Boing", EnrollmentDate = DateTime.Now },
+                //    new EFModel.Product { ID = 1, Name = "Bike", Description = "Ducati", EnrollmentDate = DateTime.Now }
+                //};
             }
             catch (Exception ex)
             {

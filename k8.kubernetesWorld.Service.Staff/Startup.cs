@@ -30,6 +30,7 @@ namespace test
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Employee API", Version = "v1" });
             });
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +45,7 @@ namespace test
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee API");
             });
+            app.UseHealthChecks("/healthcheck");
             app.UseRouting();
 
             app.UseAuthorization();

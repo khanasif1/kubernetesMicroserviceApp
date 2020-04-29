@@ -23,6 +23,7 @@ namespace k8.kubernetesWorld.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +37,8 @@ namespace k8.kubernetesWorld.Web
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseHealthChecks("/healthcheck");
             app.UseStaticFiles();
 
             app.UseRouting();

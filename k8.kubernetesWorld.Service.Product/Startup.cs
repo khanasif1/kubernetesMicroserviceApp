@@ -30,6 +30,7 @@ namespace k8.kubernetesWorld.Service.Product
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Product API", Version = "v1" });
             });
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +45,7 @@ namespace k8.kubernetesWorld.Service.Product
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Product API");
             });
+            app.UseHealthChecks("/healthcheck");
             app.UseRouting();
 
             app.UseAuthorization();
