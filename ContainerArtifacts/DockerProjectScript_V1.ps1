@@ -40,7 +40,7 @@ docker network connect  product_network staffservice
 cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Web
 docker build -t k8_web:rc1 .
 docker run -d -p 8080:80  --name web k8_web:rc1
-Start-Process "http://localhost:8080/home/index"
+#Start-Process "http://localhost:8080/home/index"
 docker network connect  product_network web
 ###########################################################################
 ########################SQL Docker Hub####################################

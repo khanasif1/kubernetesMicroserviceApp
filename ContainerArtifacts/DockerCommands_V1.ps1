@@ -18,7 +18,7 @@ docker rm employeeservice -f
 docker rmi k8_employee:rc1 -f 
 
 docker rm productservice -f
-docker rmi k8_products:rc1 -f
+docker rmi k8_product:rc1 -f
 
 docker rm staffservice -f
 docker rmi k8_staff:rc1 -f
