@@ -49,7 +49,6 @@ C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Staff.csprojAssemblyReference.cache
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Staff.AssemblyInfoInputs.cache
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Staff.AssemblyInfo.cs
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Staff.RazorTargetAssemblyInfo.cache
@@ -135,3 +134,4 @@ C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Staff.csproj.CoreCompileInputs.cache
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Staff.MvcApplicationPartsAssemblyInfo.cs
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Staff.MvcApplicationPartsAssemblyInfo.cache
+C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Staff\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Staff.csprojAssemblyReference.cache

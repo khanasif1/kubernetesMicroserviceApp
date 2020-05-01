@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace k8.kubernetesWorld.Service.Employee.EFModel
+namespace k8.kubernetesWorld.Web
 {
-    public class Employee
+    public class Staff
     {
         public int ID { get; set; }
         public string FirstName { get; set; }

@@ -1,34 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System.Data;
 using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using k8.kubernetesWorld.Service.Employee.EFModel;
+using k8.kubernetesWorld.Service.Staff;
 using k8.kubernetesWorld.Service.Employee.Data;
 
 namespace k8.kubernetesWorld.Service.Employee.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeeController : ControllerBase
+    public class StaffController : ControllerBase
     {
         private readonly ILogger<object> _logger;
         public IConfiguration Configuration { get; }
-        public EmployeeController(ILogger<object> logger, IConfiguration configuration)
+        public StaffController(ILogger<object> logger, IConfiguration configuration)
         {
             _logger = logger;
             Configuration = configuration;
         }
 
         [HttpGet]
-        public List<EFModel.Employee> Get()
+        public List<Staff.EFModel.Staff> Get()
         {
-            List<EFModel.Employee> _response = new List<EFModel.Employee>();
+            List<Staff.EFModel.Staff> _response = new List<Staff.EFModel.Staff>();
             try
             {
                 DbInitializer.Initialize(Configuration);
@@ -42,7 +38,7 @@ namespace k8.kubernetesWorld.Service.Employee.Controllers
                         {
                             while (reader.Read())
                             {
-                                _response.Add(new EFModel.Employee 
+                                _response.Add(new Staff.EFModel.Staff 
                                 { 
                                     ID=Convert.ToInt32(reader.GetInt64(0)),
                                     FirstName = reader.GetString(1),
@@ -56,7 +52,7 @@ namespace k8.kubernetesWorld.Service.Employee.Controllers
             }
             catch (Exception ex)
             {
-                _response.Add(new EFModel.Employee { _message = ex.Message.ToString() });
+                _response.Add(new Staff.EFModel.Staff { _message = ex.Message.ToString() });
 
             }
             return _response;

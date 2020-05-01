@@ -23,7 +23,7 @@ namespace k8.kubernetesWorld.Web.Controllers
         public async Task<IActionResult> Index()
         {
             string apiBase = Configuration.GetSection("AppSettings").GetSection("staff").Value;
-            List<Employee.Employee> productList = new List<Employee.Employee>();
+            List<Staff> productList = new List<Staff>();
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(
@@ -33,7 +33,7 @@ namespace k8.kubernetesWorld.Web.Controllers
                     )
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
-                    productList = JsonConvert.DeserializeObject<List<Employee.Employee>>(apiResponse);
+                    productList = JsonConvert.DeserializeObject<List<Staff>>(apiResponse);
                 }
             }
             //List<Employee.Employee> productList = new List<Employee.Employee>() {

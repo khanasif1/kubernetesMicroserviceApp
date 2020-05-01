@@ -1,4 +1,4 @@
-﻿using k8.kubernetesWorld.Service.Employee.EFModel;
+﻿using k8.kubernetesWorld.Service.Staff.EFModel;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -23,9 +23,9 @@ namespace k8.kubernetesWorld.Service.Employee.Data
 
                     StringBuilder sbDBSql = new StringBuilder();
                     sbDBSql.Append("USE master; ");
-                    sbDBSql.Append("IF DB_ID('employeeDB') IS NULL ");
+                    sbDBSql.Append("IF DB_ID('staffDB') IS NULL ");
                     sbDBSql.Append("BEGIN ");
-                    sbDBSql.Append("CREATE DATABASE employeeDB; ");
+                    sbDBSql.Append("CREATE DATABASE staffDB; ");
                     sbDBSql.Append("END ");
 
                     using (SqlCommand command = new SqlCommand(sbDBSql.ToString(), connection))
@@ -34,12 +34,12 @@ namespace k8.kubernetesWorld.Service.Employee.Data
                     }
 
                     StringBuilder sbTableSql = new StringBuilder();
-                    sbTableSql.Append("IF DB_ID('employeeDB') IS NOT NULL ");
+                    sbTableSql.Append("IF DB_ID('staffDB') IS NOT NULL ");
                     sbTableSql.Append("BEGIN ");
-                    sbTableSql.Append("USE employeeDB; ");
-                    sbTableSql.Append("IF(NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = '[dbo].[Employee]')) ");
+                    sbTableSql.Append("USE staffDB; ");
+                    sbTableSql.Append("IF(NOT EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = '[dbo].[Staff]')) ");
                     sbTableSql.Append("BEGIN ");
-                    sbTableSql.Append("CREATE TABLE[dbo].[Employee]( ");
+                    sbTableSql.Append("CREATE TABLE[dbo].[Staff]( ");
                     sbTableSql.Append("[ID][bigint] IDENTITY(1, 1) NOT NULL, ");
                     sbTableSql.Append("[FirstName] [nvarchar] (100) NULL, ");
                     sbTableSql.Append("[LastName] [nvarchar] (100) NULL, ");
@@ -47,12 +47,12 @@ namespace k8.kubernetesWorld.Service.Employee.Data
                     sbTableSql.Append(") ON[PRIMARY]; ");
 
                     sbTableSql.Append("ALTER TABLE[dbo].[Employee] ADD CONSTRAINT[DF_Employee_EnrollmentDate]  DEFAULT(getdate()) FOR[EnrollmentDate];");
-                    sbTableSql.Append("INSERT[dbo].[Employee] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Umar', N'Kin', CAST(N'2020-04-26T02:58:31.280' AS DateTime)); ");
-                    sbTableSql.Append("INSERT[dbo].[Employee] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Sam', N'Blake', CAST(N'2020-04-26T02:58:38.350' AS DateTime)); ");
-                    sbTableSql.Append("INSERT[dbo].[Employee] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Peter', N'Pan', CAST(N'2020-04-26T02:58:42.930' AS DateTime)); ");
-                    sbTableSql.Append("INSERT[dbo].[Employee] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Micky', N'Mouse', CAST(N'2020-04-26T02:58:48.253' AS DateTime)); ");
-                    sbTableSql.Append("INSERT[dbo].[Employee] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Ray', N'Da', CAST(N'2020-04-26T02:58:53.320' AS DateTime)); ");
-                    sbTableSql.Append("INSERT[dbo].[Employee] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Niel', N'White', CAST(N'2020-04-26T02:58:59.757' AS DateTime)); "); sbTableSql.Append("END; ");
+                    sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Umar', N'Kin', CAST(N'2020-04-26T02:58:31.280' AS DateTime)); ");
+                    sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Sam', N'Blake', CAST(N'2020-04-26T02:58:38.350' AS DateTime)); ");
+                    sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Peter', N'Pan', CAST(N'2020-04-26T02:58:42.930' AS DateTime)); ");
+                    sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Micky', N'Mouse', CAST(N'2020-04-26T02:58:48.253' AS DateTime)); ");
+                    sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Ray', N'Da', CAST(N'2020-04-26T02:58:53.320' AS DateTime)); ");
+                    sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Niel', N'White', CAST(N'2020-04-26T02:58:59.757' AS DateTime)); "); sbTableSql.Append("END; ");
                     sbTableSql.Append("END; ");
 
 

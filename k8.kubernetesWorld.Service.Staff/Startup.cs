@@ -28,7 +28,7 @@ namespace test
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Employee API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Staff API", Version = "v1" });
             });
             services.AddHealthChecks();
         }
@@ -43,7 +43,7 @@ namespace test
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Employee API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Staff API");
             });
             app.UseHealthChecks("/healthcheck");
             app.UseRouting();
