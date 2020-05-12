@@ -32,7 +32,7 @@ namespace k8.kubernetesWorld.Service.Employee.Controllers
                 {
                     connection.Open();
                     Console.WriteLine("Connected successfully.");
-                    using (SqlCommand command = new SqlCommand("USE employeeDB; Select * from [Employee];", connection))
+                    using (SqlCommand command = new SqlCommand("USE staffDB; Select * from [Staff];", connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())
                         {

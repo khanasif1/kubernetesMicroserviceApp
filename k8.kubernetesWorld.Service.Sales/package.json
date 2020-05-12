@@ -1,0 +1,9 @@
+{
+  "name": "k8.kubernetes-world.service.sales",
+  "version": "0.0.0",
+  "description": "k8.kubernetesWorld.Service.Sales",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

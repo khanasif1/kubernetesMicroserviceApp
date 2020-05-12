@@ -46,7 +46,7 @@ namespace k8.kubernetesWorld.Service.Employee.Data
                     sbTableSql.Append("[EnrollmentDate] [datetime] NULL ");
                     sbTableSql.Append(") ON[PRIMARY]; ");
 
-                    sbTableSql.Append("ALTER TABLE[dbo].[Employee] ADD CONSTRAINT[DF_Employee_EnrollmentDate]  DEFAULT(getdate()) FOR[EnrollmentDate];");
+                    sbTableSql.Append("ALTER TABLE[dbo].[Staff] ADD CONSTRAINT[DF_Staff_EnrollmentDate]  DEFAULT(getdate()) FOR[EnrollmentDate];");
                     sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Umar', N'Kin', CAST(N'2020-04-26T02:58:31.280' AS DateTime)); ");
                     sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Sam', N'Blake', CAST(N'2020-04-26T02:58:38.350' AS DateTime)); ");
                     sbTableSql.Append("INSERT[dbo].[Staff] ([FirstName], [LastName], [EnrollmentDate]) VALUES(N'Peter', N'Pan', CAST(N'2020-04-26T02:58:42.930' AS DateTime)); ");

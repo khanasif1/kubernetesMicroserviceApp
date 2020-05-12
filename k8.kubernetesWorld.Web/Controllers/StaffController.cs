@@ -29,7 +29,7 @@ namespace k8.kubernetesWorld.Web.Controllers
                 using (var response = await httpClient.GetAsync(
                     $"{apiBase}" +
                     //"http://localhost:5652" +
-                    "/api/Employee")
+                    "/api/Staff")
                     )
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();

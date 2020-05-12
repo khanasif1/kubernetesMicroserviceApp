@@ -4,9 +4,9 @@
 docker network ls --no-trunc
 docker network create product_network
 
-docker inspect sqlemployee -f "{{json .NetworkSettings.Networks }}" 
+docker inspect sqlstaff -f "{{json .NetworkSettings.Networks }}" 
+docker inspect staffservice -f "{{json .NetworkSettings.Networks }}"   # staff
 docker inspect sqlproduct -f "{{json .NetworkSettings.Networks }}"   
-docker inspect employeeservice -f "{{json .NetworkSettings.Networks }}"   # Employee
 docker inspect productservice -f "{{json .NetworkSettings.Networks }}"   # Product
 docker inspect k8.kubernetesWorld.Service.Employee -f "{{json .NetworkSettings.Networks }}"   # Employee  VS debug 
 ######################Employee API DEPLOYMENT###################################
@@ -46,7 +46,7 @@ docker network connect  product_network web
 ########################SQL Docker Hub####################################
 
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Redhat0!" `
-   -p 1433:1433 --name sqlemployee `
+   -p 1433:1433 --name sqlstaff `
    -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
 
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Redhat0!" `
@@ -59,7 +59,7 @@ SELECT NAME from sys.Databases
 Select * from INFORMATION_SCHEMA.TABLES
 
 
-docker network connect  product_network sqlemployee
+docker network connect  product_network sqlstaff
 docker network connect  product_network sqlproduct
 ###########################################################################
 ########################Push Docker Hub####################################
