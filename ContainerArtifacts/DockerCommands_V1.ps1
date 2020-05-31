@@ -14,9 +14,6 @@ docker rmi $(docker images -a -q) -f   # remove all images
 docker rmi $(docker images -f “dangling=true” -q)  #remove all images with <none> 
 docker rmi k8_persistence:rc1 -f  
 
-docker rm staffservice -f
-docker rmi k8_staff:rc1 -f 
-
 docker rm productservice -f
 docker rmi k8_product:rc1 -f
 

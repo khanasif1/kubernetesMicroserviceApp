@@ -25,7 +25,7 @@ docker build -t k8_product:rc1 .
 docker run -d -p 8082:80  --name productservice k8_product:rc1
 #Start-Process "http://localhost:8082/swagger"
 
-docker network connect  product_network productservice  
+docker network connect  k8_app_network productservice  
 ###########################################################################
 ######################Staff DEPLOYMENT###########################
 
@@ -34,16 +34,16 @@ docker build -t k8_staff:rc1 .
 docker run -d -p 8083:80  --name staffservice k8_staff:rc1
 #Start-Process "http://localhost:8083/swagger"
 
-docker network connect  product_network staffservice  
+docker network connect  k8_app_network staffservice  
 ###########################################################################
 ######################Sales DEPLOYMENT - Node##############################
 
 cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Sales
 docker build -t k8_sales:rc1 .
 docker run -d -p 8085:80  --name salesservice k8_sales:rc1
-#Start-Process "http://localhost:8083/swagger"
+#Start-Process "http://localhost:8085/health"
 
-docker network connect  product_network salesservice  
+docker network connect  k8_app_network salesservice  
 ###########################################################################
 ##############################Web DEPLOYMENT###############################
 
@@ -51,7 +51,7 @@ cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWor
 docker build -t k8_web:rc1 .
 docker run -d -p 8080:80  --name web k8_web:rc1
 #Start-Process "http://localhost:8080/home/index"
-docker network connect  product_network web
+docker network connect  k8_app_network web
 ###########################################################################
 ########################SQL Docker Hub####################################
 
@@ -69,8 +69,8 @@ SELECT NAME from sys.Databases
 Select * from INFORMATION_SCHEMA.TABLES
 
 
-docker network connect  product_network sqlstaff
-docker network connect  product_network sqlproduct
+docker network connect  k8_app_network sqlstaff
+docker network connect  k8_app_network sqlproduct
 ###########################################################################
 ########################Push Docker Hub####################################
 docker login -u=khanasif1 -p=Redhat0!
