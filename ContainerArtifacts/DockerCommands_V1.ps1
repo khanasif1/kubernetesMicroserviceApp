@@ -23,6 +23,10 @@ docker rmi k8_product:rc1 -f
 docker rm staffservice -f
 docker rmi k8_staff:rc1 -f
 
+docker rm salesservice -f
+docker rmi k8_sales:rc1 -f
+#docker rmi node:7
+
 docker rm web -f
 docker rmi k8_web:rc1 -f
 docker rmi $(docker images -f “dangling=true” -q)  #remove all images with <none> 

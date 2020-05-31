@@ -4,15 +4,18 @@ var express = require('express'); // Web Framework
 var app = express();
 
 const request = require("request");
-const urlProducts = "http://localhost:8082/api/Product";
-const urlStaff = "http://localhost:8083/api/Staff";
+//const urlProducts = "http://localhost:8082/api/Product";
+//const urlStaff = "http://localhost:8083/api/Staff";
+
+const urlProducts = "http://productservice/api/Product";
+const urlStaff = "http://staffservice/api/Staff";
 
 
 
  database: 'productDB'
 //}
-// Start server and listen on http://localhost:8085/
-var server = app.listen(8085, function () {
+// Start server and listen on http://localhost:80/
+var server = app.listen(80, function () {
     var host = server.address().address
     var port = server.address().port
 
@@ -48,5 +51,8 @@ app.get('/', function (req, res) {
         console.log(salesresponse);
         res.send(salesresponse);
     }   
+});
+app.get('/health', function (req, res) {
+    res.sendStatus(200);
 });
 

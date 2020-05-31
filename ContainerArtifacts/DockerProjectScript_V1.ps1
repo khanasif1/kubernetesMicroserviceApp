@@ -3,6 +3,7 @@
 ########################Create Network####################################
 docker network ls --no-trunc
 docker network create product_network
+docker network create k8_app_network
 
 docker inspect sqlstaff -f "{{json .NetworkSettings.Networks }}" 
 docker inspect staffservice -f "{{json .NetworkSettings.Networks }}"   # staff
@@ -34,6 +35,15 @@ docker run -d -p 8083:80  --name staffservice k8_staff:rc1
 #Start-Process "http://localhost:8083/swagger"
 
 docker network connect  product_network staffservice  
+###########################################################################
+######################Sales DEPLOYMENT - Node##############################
+
+cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Sales
+docker build -t k8_sales:rc1 .
+docker run -d -p 8085:80  --name salesservice k8_sales:rc1
+#Start-Process "http://localhost:8083/swagger"
+
+docker network connect  product_network salesservice  
 ###########################################################################
 ##############################Web DEPLOYMENT###############################
 
