@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using k8.kubernetesWorld.Service.Staff;
 using k8.kubernetesWorld.Service.Employee.Data;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Hosting;
 
 namespace k8.kubernetesWorld.Service.Employee.Controllers
 {
@@ -15,10 +17,17 @@ namespace k8.kubernetesWorld.Service.Employee.Controllers
     {
         private readonly ILogger<object> _logger;
         public IConfiguration Configuration { get; }
+
         public StaffController(ILogger<object> logger, IConfiguration configuration)
         {
             _logger = logger;
             Configuration = configuration;
+        }
+        [HttpGet]
+        [Route("GetMetadata")]
+        public IEnumerable<string> GetMetadata()
+        {
+            return new string[] { "Connection",$"environment:{Environment.GetEnvironmentVariable("DefaultConnection")}" };
         }
 
         [HttpGet]
@@ -27,8 +36,9 @@ namespace k8.kubernetesWorld.Service.Employee.Controllers
             List<Staff.EFModel.Staff> _response = new List<Staff.EFModel.Staff>();
             try
             {
-                DbInitializer.Initialize(Configuration);
-                using (SqlConnection connection = new SqlConnection(Configuration.GetConnectionString("DefaultConnection")))
+                DbInitializer.Initialize(Environment.GetEnvironmentVariable("DefaultConnection"));
+                using (SqlConnection connection = new SqlConnection(/*Configuration.GetConnectionString("DefaultConnection")*/
+                    Environment.GetEnvironmentVariable("DefaultConnection")))
                 {
                     connection.Open();
                     Console.WriteLine("Connected successfully.");
@@ -38,17 +48,17 @@ namespace k8.kubernetesWorld.Service.Employee.Controllers
                         {
                             while (reader.Read())
                             {
-                                _response.Add(new Staff.EFModel.Staff 
-                                { 
-                                    ID=Convert.ToInt32(reader.GetInt64(0)),
+                                _response.Add(new Staff.EFModel.Staff
+                                {
+                                    ID = Convert.ToInt32(reader.GetInt64(0)),
                                     FirstName = reader.GetString(1),
                                     LastName = reader.GetString(2),
-                                    EnrollmentDate=reader.GetDateTime(3)
+                                    EnrollmentDate = reader.GetDateTime(3)
                                 });
                             }
                         }
                     }
-                }                
+                }
             }
             catch (Exception ex)
             {

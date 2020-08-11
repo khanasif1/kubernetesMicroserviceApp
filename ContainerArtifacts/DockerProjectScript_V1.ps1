@@ -56,7 +56,7 @@ docker network connect  k8_app_network web
 ########################SQL Docker Hub####################################
 
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Redhat0!" `
-   -p 1433:1433 --name sqlstaff `
+   -p 1433:1433 --name mssql-staff `
    -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
 
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Redhat0!" `
@@ -69,7 +69,7 @@ SELECT NAME from sys.Databases
 Select * from INFORMATION_SCHEMA.TABLES
 
 
-docker network connect  k8_app_network sqlstaff
+docker network connect  k8_app_network mssql-staff
 docker network connect  k8_app_network sqlproduct
 ###########################################################################
 ########################Push Docker Hub####################################

@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: api-ingress
+  namespace: k8-org
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: staff-service
+          servicePort: 80
+      - path: /api/staff/GetMetadata
+        backend:
+          serviceName: staff-service
+          servicePort: 80          

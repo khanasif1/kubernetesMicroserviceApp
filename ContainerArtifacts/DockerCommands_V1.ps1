@@ -4,7 +4,8 @@ docker images -a   --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Create
 
 docker image prune -a --force --filter "until=2020-04-25T00:00:00"
 
-docker rm f82b1449d36d -f
+docker rm 51993f5f620b -f
+docker rmi f942338483eb -f
 docker stop $(docker ps -a -q)         # stop all containers
 docker rm $(docker ps -a -q) -f        # remove all containers
 docker rmi k8_server_user:rc2.5 -f
@@ -14,7 +15,7 @@ docker rmi $(docker images -a -q) -f   # remove all images
 docker rmi $(docker images -f “dangling=true” -q)  #remove all images with <none> 
 docker rmi k8_persistence:rc1 -f  
 
-docker rm productservice -f
+docker rm staffservice -f
 docker rmi k8_product:rc1 -f
 
 docker rm staffservice -f

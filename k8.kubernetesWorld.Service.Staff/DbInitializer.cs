@@ -11,12 +11,12 @@ namespace k8.kubernetesWorld.Service.Employee.Data
 {
     public static class DbInitializer
     {
-        public static bool Initialize(IConfiguration configuration)
+        public static bool Initialize(string connectionstring)
         {
             List<string> _response = new List<string>();
             try
             {
-                using (SqlConnection connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+                using (SqlConnection connection = new SqlConnection(connectionstring))
                 {
                     connection.Open();
                     Console.WriteLine("Connected successfully.");
