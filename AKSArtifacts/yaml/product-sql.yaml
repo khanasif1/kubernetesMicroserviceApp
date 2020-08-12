@@ -27,12 +27,12 @@ spec:
               name: mssql
               key: SA_PASSWORD 
         volumeMounts:
-        - name: mssqldb
+        - name: mssqldb-product
           mountPath: /var/opt/mssql-product
       volumes:
-      - name: mssqldb
+      - name: mssqldb-product
         persistentVolumeClaim:
-          claimName: mssql-data-product
+          claimName: product-mssql-data
 ---
 apiVersion: v1
 kind: Service
@@ -46,4 +46,4 @@ spec:
     - protocol: TCP
       port: 1433
       targetPort: 1433
-  type: LoadBalancer
+  type: ClusterIP

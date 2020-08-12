@@ -15,7 +15,7 @@ spec:
       spec:
         containers:
         - name: product
-          image:  msdemoregistry.azurecr.io/k8_product:1.0
+          image:  msdemoregistry.azurecr.io/k8_product:1.00
           imagePullPolicy: Always
           readinessProbe:
             httpGet:
@@ -29,7 +29,7 @@ spec:
           - name: ASPNETCORE_ENVIRONMENT
             value: Production
           - name: DefaultConnection
-            value: Server=mssql-product;User Id=sa;Password=Redhat0!;            
+            value: Server=mssql-product;User Id=sa;Password=Redhat0!;Integrated Security=false;            
           ports:
           - containerPort: 80
 ---
@@ -45,4 +45,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: LoadBalancer      
+  type: ClusterIP      

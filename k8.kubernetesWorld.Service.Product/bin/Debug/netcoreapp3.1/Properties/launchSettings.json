@@ -14,7 +14,9 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        //"DefaultConnection": "Server=localhost,1433;User Id=sa;Password=Redhat0!;Integrated Security=false"
+        "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Integrated Security=true"
       }
     },
     "k8.kubernetesWorld.Service.Product": {

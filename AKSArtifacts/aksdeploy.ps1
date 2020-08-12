@@ -13,22 +13,29 @@ code . 
 az acr login --name $acrId 
 az aks update -g $myResourceGroup -n $myAKSCluster --attach-acr $acrId
 
-cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\AKSArtifacts\yaml
-
-
 kubectl config set-context --current --namespace=k8-org
 
-<#************Sql************#>
+<#************ Staff Sql************#>
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="Redhat0!" -n k8-org
 kubectl get secrets -n k8-org
 kubectl delete secret access-tokensecret "mssql"
 
-kubectl apply -f sql-vol.yaml
+kubectl apply -f yaml/staff-sql-vol.yaml
 kubectl describe pvc mssql-data -n k8-org
 #kubectl delete pvc mssql-data
 
-kubectl apply -f yaml/sql-product.yaml
-kubectl apply -f yaml/sql-staff.yaml
+kubectl apply -f yaml/product-sql.yaml
+kubectl apply -f yaml/staff-sql.yaml
+<#************ Product  Sql************#>
+# kubectl create secret generic mssql --from-literal=SA_PASSWORD="Redhat0!" -n k8-org
+# kubectl get secrets -n k8-org
+# kubectl delete secret access-tokensecret "mssql"
+
+kubectl apply -f yaml/product-sql-vol.yaml
+kubectl describe pvc product-mssql-data -n k8-org
+#kubectl delete pvc mssql-data
+
+kubectl apply -f yaml/product-sql.yaml
 <#************Apps************#>
 kubectl apply -f yaml/product.yaml
 kubectl apply -f yaml/staff.yaml
