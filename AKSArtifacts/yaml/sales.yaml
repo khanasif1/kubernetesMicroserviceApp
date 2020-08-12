@@ -15,7 +15,7 @@ spec:
       spec:
         containers:
         - name: sales
-          image:  msdemoregistry.azurecr.io/k8_sales:1.0
+          image:  msdemoregistry.azurecr.io/k8_sales:1.00
           imagePullPolicy: Always
           readinessProbe:
             httpGet:
@@ -43,4 +43,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: LoadBalancer      
+  type: ClusterIP      

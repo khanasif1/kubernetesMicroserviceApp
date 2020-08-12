@@ -7,8 +7,8 @@ const request = require("request");
 //const urlProducts = "http://localhost:8082/api/Product";
 //const urlStaff = "http://localhost:8083/api/Staff";
 
-const urlProducts = "http://productservice/api/Product";
-const urlStaff = "http://staffservice/api/Staff";
+const urlProducts = "http://product-service/api/Product";
+const urlStaff = "http://staff-service/api/Staff";
 
 
 
@@ -22,7 +22,7 @@ var server = app.listen(80, function () {
     console.log("app listening at http://%s:%s", host, port)
 });
 
-app.get('/', function (req, res) {
+app.get('/api/sales', function (req, res) {
     var jsonstaffData = "";
     var jsonproductData = "";
     var salesresponse = [];

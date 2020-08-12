@@ -30,11 +30,11 @@ docker push msdemoregistry.azurecr.io/k8_staff:1.00
 Upload Sales Image
 *********************#>
 #Tag images
-docker tag k8_sales:rc1  msdemoregistry.azurecr.io/k8_sales:1.0
+docker tag k8_sales:rc1  msdemoregistry.azurecr.io/k8_sales:1.00
 #******Test Tag Image******
 #docker run -d -p 8085:80  --name saleservice msdemoregistry.azurecr.io/k8_sales:1.0
 #Push to ACR
-docker push msdemoregistry.azurecr.io/k8_sales:1.0
+docker push msdemoregistry.azurecr.io/k8_sales:1.00
 
 <#*********************
 Upload Web Image

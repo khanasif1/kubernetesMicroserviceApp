@@ -7,11 +7,27 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /swagger
         backend:
           serviceName: staff-service
           servicePort: 80
       - path: /api/staff/GetMetadata
         backend:
           serviceName: staff-service
-          servicePort: 80          
+          servicePort: 80 
+      - path: /api/staff
+        backend:
+          serviceName: staff-service
+          servicePort: 80           
+      - path: /api/product/GetMetadata
+        backend:
+          serviceName: product-service
+          servicePort: 80 
+      - path: /api/product
+        backend:
+          serviceName: product-service
+          servicePort: 80  
+      - path: /api/sales
+        backend:
+          serviceName: sales-service
+          servicePort: 80                                        
