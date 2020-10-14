@@ -4,8 +4,8 @@ var express = require('express'); // Web Framework
 var app = express();
 
 const request = require("request");
-//const urlProducts = "http://localhost:8082/api/Product";
-//const urlStaff = "http://localhost:8083/api/Staff";
+//const urlProducts = "http://localhost:2148/api/Product";
+//const urlStaff = "http://localhost:5652/api/Staff";
 
 const urlProducts = "http://product-service/api/Product";
 const urlStaff = "http://staff-service/api/Staff";
@@ -14,7 +14,7 @@ const urlStaff = "http://staff-service/api/Staff";
 
  database: 'productDB'
 //}
-// Start server and listen on http://localhost:80/
+// Start server and listen on http://localhost:8000/
 var server = app.listen(80, function () {
     var host = server.address().address
     var port = server.address().port

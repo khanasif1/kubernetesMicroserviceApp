@@ -7,8 +7,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\k82.png" />
+    <None Include="wwwroot\images\k81.png" />
+    <None Include="wwwroot\images\k8s.png" />
+    <None Include="wwwroot\images\microservices_in_net.png" />
   </ItemGroup>
 
 </Project>

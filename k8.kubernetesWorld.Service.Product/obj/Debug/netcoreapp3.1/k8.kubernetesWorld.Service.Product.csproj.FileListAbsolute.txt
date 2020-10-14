@@ -195,7 +195,6 @@ C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Product.csprojAssemblyReference.cache
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Product.csproj.CoreCompileInputs.cache
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Product.MvcApplicationPartsAssemblyInfo.cs
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Service.Product.MvcApplicationPartsAssemblyInfo.cache

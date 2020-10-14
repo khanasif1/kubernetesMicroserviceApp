@@ -15,7 +15,7 @@ spec:
       spec:
         containers:
         - name: web
-          image:  msdemoregistry.azurecr.io/k8_web:1.0
+          image:  msdemoregistry.azurecr.io/k8_web:1.00
           imagePullPolicy: Always
           readinessProbe:
             httpGet:
@@ -28,6 +28,12 @@ spec:
           env:
           - name: ASPNETCORE_ENVIRONMENT
             value: Production
+          - name: staff
+            value: http://staff-service
+          - name: product
+            value: http://product-service 
+          - name: sales
+            value: http://sales-service            
           ports:
           - containerPort: 80
 ---
@@ -43,4 +49,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: LoadBalancer      
+  type: ClusterIP      

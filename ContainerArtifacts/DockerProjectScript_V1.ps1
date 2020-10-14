@@ -10,14 +10,6 @@ docker inspect staffservice -f "{{json .NetworkSettings.Networks }}"   # staff
 docker inspect sqlproduct -f "{{json .NetworkSettings.Networks }}"   
 docker inspect productservice -f "{{json .NetworkSettings.Networks }}"   # Product
 docker inspect k8.kubernetesWorld.Service.Employee -f "{{json .NetworkSettings.Networks }}"   # Employee  VS debug 
-######################Employee API DEPLOYMENT###################################
-
-# cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Employee
-# docker build -t k8_employee:rc1 .
-# docker run -d -p 8081:80  --name employeeservice k8_employee:rc1
-# #Start-Process "http://localhost:8081/swagger"
-# docker network connect  product_network employeeservice 
-###########################################################################
 ######################Product API DEPLOYMENT###########################
 
 cd C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Product

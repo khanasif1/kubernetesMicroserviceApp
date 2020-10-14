@@ -30,4 +30,8 @@ spec:
       - path: /api/sales
         backend:
           serviceName: sales-service
-          servicePort: 80                                        
+          servicePort: 80   
+      - path: /
+        backend:
+          serviceName: web-service
+          servicePort: 80                                                  

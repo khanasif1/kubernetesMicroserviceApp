@@ -146,4 +146,4 @@ C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Web\obj\Debug\netcoreapp3.1\staticwebassets\k8.kubernetesWorld.Web.StaticWebAssets.Manifest.cache
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Web\obj\Debug\netcoreapp3.1\staticwebassets\k8.kubernetesWorld.Web.StaticWebAssets.xml
 C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Web\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Web.genruntimeconfig.cache
-C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Web\obj\Debug\netcoreapp3.1\k8.kubernetesWorld.Web.csprojAssemblyReference.cache
+C:\_dev\_github\k8.kubernetesWorld\kubernetesMicroserviceApp\k8.kubernetesWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Sales\Index.cshtml.g.cs

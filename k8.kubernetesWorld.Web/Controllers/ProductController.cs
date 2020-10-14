@@ -23,13 +23,13 @@ namespace k8.kubernetesWorld.Web.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            string apiBase = Configuration.GetSection("AppSettings").GetSection("product").Value;
+            string apiBase = Environment.GetEnvironmentVariable("product"); ;
+            //Configuration.GetSection("AppSettings").GetSection("product").Value;
             List<Product.Product> productList = new List<Product.Product>();
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(
-                    $"{apiBase}" +
-                    //"http://localhost:2148" +
+                    $"{apiBase}" +                   
                     "/api/Product")
                     )
                 {
@@ -37,12 +37,6 @@ namespace k8.kubernetesWorld.Web.Controllers
                     productList = JsonConvert.DeserializeObject<List<Product.Product>>(apiResponse);
                 }
             }
-            //List<Product.Product> productList = new List<Product.Product>() {
-            //    new Product.Product { ID = 1, Name = "Car", Description = "Ford", EnrollmentDate = DateTime.Now },
-            //    new Product.Product { ID = 1, Name = "Truck", Description = "Tesla", EnrollmentDate = DateTime.Now },
-            //    new Product.Product { ID = 1, Name = "Plane", Description = "Boing", EnrollmentDate = DateTime.Now },
-            //    new Product.Product { ID = 1, Name = "Bike", Description = "Ducati", EnrollmentDate = DateTime.Now }
-            //};
             return View(productList);
         }
     }

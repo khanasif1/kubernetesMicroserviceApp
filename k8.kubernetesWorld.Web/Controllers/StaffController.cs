@@ -22,13 +22,13 @@ namespace k8.kubernetesWorld.Web.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            string apiBase = Configuration.GetSection("AppSettings").GetSection("staff").Value;
+            string apiBase = Environment.GetEnvironmentVariable("staff");
+                //Configuration.GetSection("AppSettings").GetSection("staff").Value;
             List<Staff> productList = new List<Staff>();
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(
-                    $"{apiBase}" +
-                    //"http://localhost:5652" +
+                    $"{apiBase}" +                    
                     "/api/Staff")
                     )
                 {
@@ -36,12 +36,6 @@ namespace k8.kubernetesWorld.Web.Controllers
                     productList = JsonConvert.DeserializeObject<List<Staff>>(apiResponse);
                 }
             }
-            //List<Employee.Employee> productList = new List<Employee.Employee>() {
-            //    new Employee.Employee { ID = 1, FirstName = "Car", LastName = "Ford", EnrollmentDate = DateTime.Now },
-            //    new Employee.Employee { ID = 1, FirstName = "Truck",LastName = "Tesla", EnrollmentDate = DateTime.Now },
-            //    new Employee.Employee { ID = 1, FirstName = "Plane",LastName = "Boing", EnrollmentDate = DateTime.Now },
-            //    new Employee.Employee { ID = 1, FirstName = "Bike", LastName= "Ducati", EnrollmentDate = DateTime.Now }
-            //};
             return View(productList);
         }
     }

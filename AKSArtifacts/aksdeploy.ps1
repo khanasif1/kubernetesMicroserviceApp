@@ -18,6 +18,7 @@ kubectl config set-context --current --namespace=k8-org
 <#************ Staff Sql************#>
 kubectl create secret generic mssql --from-literal=SA_PASSWORD="Redhat0!" -n k8-org
 kubectl get secrets -n k8-org
+kubectl describe mssql
 kubectl delete secret access-tokensecret "mssql"
 
 kubectl apply -f yaml/staff-sql-vol.yaml

@@ -5,7 +5,7 @@ docker images -a   --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Create
 docker image prune -a --force --filter "until=2020-04-25T00:00:00"
 
 docker rm 51993f5f620b -f
-docker rmi f942338483eb -f
+docker rmi 760d5d1bddd3 -f
 docker stop $(docker ps -a -q)         # stop all containers
 docker rm $(docker ps -a -q) -f        # remove all containers
 docker rmi k8_server_user:rc2.5 -f
