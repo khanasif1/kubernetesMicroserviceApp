@@ -55,5 +55,6 @@ istioctl dashboard jaeger
 #Kiali
 istioctl dashboard kiali
 #Envoy
-istioctl dashboard envoy <pod-name>.<namespace>
+#istioctl dashboard envoy <pod-name>.<namespace>
+
 
