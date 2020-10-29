@@ -1,3 +1,7 @@
+<#
+https://docs.microsoft.com/en-us/azure/aks/start-stop-cluster
+#>
+
 # Install the aks-preview extension
 az extension add --name aks-preview
 

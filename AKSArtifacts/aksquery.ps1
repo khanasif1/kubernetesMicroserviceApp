@@ -28,7 +28,7 @@ curl -i -X GET "http://10.0.53.59/health"
 curl -i -X GET "http://10.0.53.59"
 
 
-kubectl describe pod mssql-product-547b944d69-kl5gv  -n k8-org
+kubectl describe pod web-bfdbf7f45-54z8b  -n k8-org
 kubectl describe pod product-9d5658b6-46rzd     -n k8-org
 kubectl describe pod staff-78bcf8c449-sbz2t   -n k8-org
 kubectl describe pod sales-5f7dcccd44-pwtgw  -n k8-org
