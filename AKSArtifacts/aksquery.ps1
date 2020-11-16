@@ -1,6 +1,7 @@
 kubectl config set-context --current --namespace=k8-org
 
 kubectl create namespace k8-org
+kubectl get namespace
 kubectl get nodes --watch 
 kubectl get deployment  
 kubectl get services
