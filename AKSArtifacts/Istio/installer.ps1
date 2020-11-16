@@ -57,4 +57,19 @@ istioctl dashboard kiali
 #Envoy
 #istioctl dashboard envoy <pod-name>.<namespace>
 
+<#************************
+Remove Istio from Namespace
+************************#>
+#verify label
+kubectl get namespace -L istio-injection
+
+# disable istio envoy sidecar 
+kubectl label namespace k8-org istio-injection=disabled --overwrite=true
+
+# remove istio envoy sidecar from namespace 
+kubectl label namespace k8-org istio-injection-
+
+
+
+
 
