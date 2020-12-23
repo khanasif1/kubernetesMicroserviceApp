@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\k8.kubernetesWorld.Web.csproj",
+  "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\k8.kubernetesWorld.Web.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,53 +14392,53 @@
   "RootNamespace": "k8.kubernetesWorld.Web",
   "Documents": [
     {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Product\\Index.cshtml",
-      "TargetPath": "Views\\Product\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Staff\\Index.cshtml",
-      "TargetPath": "Views\\Staff\\Index.cshtml",
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Sales\\Index.cshtml",
+      "TargetPath": "Views\\Sales\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\_dev\\_github\\k8.kubernetesWorld\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Sales\\Index.cshtml",
-      "TargetPath": "Views\\Sales\\Index.cshtml",
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Product\\Index.cshtml",
+      "TargetPath": "Views\\Product\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Web\\Views\\Staff\\Index.cshtml",
+      "TargetPath": "Views\\Staff\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],

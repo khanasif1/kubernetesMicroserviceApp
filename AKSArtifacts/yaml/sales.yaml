@@ -15,8 +15,15 @@ spec:
       spec:
         containers:
         - name: sales
-          image:  msdemoregistry.azurecr.io/k8_sales:1.00
+          image:  msdemoregistry.azurecr.io/k8_sales:1.00          
           imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"          
           readinessProbe:
             httpGet:
               port: 80
