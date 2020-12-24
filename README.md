@@ -58,3 +58,30 @@ Microservice architecture based kubernetes application
 <!-- wp:list -->
 <ul><li><span class="has-inline-color has-luminous-vivid-orange-color"><strong>GetMetadata : </strong></span>This is just for internal testing, I would not keep this open if deployed in production. This was just for checking the connection details with DB container. I am pulling the connection details from environment variable, which set through the container deployment Yaml.</li><li><span class="has-inline-color has-luminous-vivid-orange-color"><strong>Get “Get All Staff/Products”: </strong></span>Staff &amp; Product API method does nothing much fancy, below are the activity performed by this API:<ul><li>It builds the database schema if not exists</li><li>It seeds the database with records</li><li>It connects to database and pulls all records.</li><li>It then return the records as a custom entity generic list.</li></ul></li></ul>
 <!-- /wp:list -->
+<!-- wp:heading {"level":4} -->
+<h4>Sales API<a href="https://github.com/khanasif1/kubernetesMicroserviceApp/tree/master/k8.kubernetesWorld.Service.Sales" target="_blank" rel="noreferrer noopener"> (Github Link)</a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"100%"} -->
+<div class="wp-block-column" style="flex-basis:100%"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"100%"} -->
+<div class="wp-block-column" style="flex-basis:100%"><!-- wp:image {"align":"center","id":4800,"width":283,"height":131,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+<div class="wp-block-image is-style-default"><figure class="aligncenter size-large is-resized"><img src="https://khanasif1.files.wordpress.com/2020/11/nodejs.jpg?w=778" alt="" class="wp-image-4800" width="283" height="131"/></figure></div>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:paragraph -->
+<p>Sales API in contrast to Staff and Product API does not interact with any database. Also Sales API is build  using <strong>NodeJS with express</strong>. It relies on Staff and Product API for data feed. Below are activity performed by Sales API</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><span class="has-inline-color has-luminous-vivid-orange-color">Get Sales</span></strong>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Connect with Staff and Product API to source data</li><li>Model Staff and Product data to build Sales entity, by mapping Staffs to Products</li><li>Return Sales entity as a response to API call</li></ul>
+<!-- /wp:list -->
