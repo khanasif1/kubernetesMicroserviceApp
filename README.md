@@ -108,7 +108,3 @@ Microservice architecture based kubernetes application
 <!-- wp:list -->
 <ul><li><strong><span class="has-inline-color has-luminous-vivid-orange-color">Home Screen</span>:</strong> It has menu items using which you can navigate to relevant screens</li><li><strong><span class="has-inline-color has-luminous-vivid-orange-color">Product Screen:</span></strong> View gets the data from controller which call the Product API for data feed</li><li><strong><span class="has-inline-color has-luminous-vivid-orange-color">Staff Screen:</span></strong> View gets the data from controller which call the Staff API for data feed</li><li><strong><span class="has-inline-color has-luminous-vivid-orange-color">Sales Screen:</span></strong> View gets the data from controller which call the Sales API for data feed</li></ul>
 <!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>In the Part-2 of this blog series <em><strong><span style="color:#f50505;" class="has-inline-color"><em><strong>"</strong></em>coming soon<em><strong><em><strong>"</strong></em></strong></em></span></strong></em> I will walk through  Yaml files which we will be using to deploy this solution on Azure Kubernetes Services.</p>
-<!-- /wp:paragraph -->
