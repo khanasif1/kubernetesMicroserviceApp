@@ -2,13 +2,7 @@ $myResourceGroup="**resource group**"
 $acrId ="**ACR name**"
 $myAKSCluster="** Cluster Name**"
 
-<#If az module missing
-Install-PackageProvider -Name NuGet -Force
-Install-Module -Name PowerShellGet -Force -AllowClobber
-Register-PSRepository -Default -InstallationPolicy Trusted
-Install-Module -Name Az -AllowClobber -Scope AllUsers
-Install-Module -Name Az -Repository PSGallery -Force
-#>
+
 
 az login
 az aks get-credentials --resource-group  k8rg --name demo-k8cluster
