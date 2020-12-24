@@ -85,3 +85,30 @@ Microservice architecture based kubernetes application
 <!-- wp:list -->
 <ul><li>Connect with Staff and Product API to source data</li><li>Model Staff and Product data to build Sales entity, by mapping Staffs to Products</li><li>Return Sales entity as a response to API call</li></ul>
 <!-- /wp:list -->
+<!-- wp:heading {"level":4} -->
+<h4>User Interface Frontend <a href="https://github.com/khanasif1/kubernetesMicroserviceApp/tree/master/k8.kubernetesWorld.Web" target="_blank" rel="noreferrer noopener">(Github Link)</a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"100%"} -->
+<div class="wp-block-column" style="flex-basis:100%"><!-- wp:image {"align":"left","id":4810,"width":290,"height":192,"sizeSlug":"large","linkDestination":"media"} -->
+<div class="wp-block-image"><figure class="alignleft size-large is-resized"><a href="https://khanasif1.files.wordpress.com/2020/11/asp.net-core-mvc.png"><img src="https://khanasif1.files.wordpress.com/2020/11/asp.net-core-mvc.png?w=1000" alt="" class="wp-image-4810" width="290" height="192"/></a></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:image {"align":"left","id":4818,"width":118,"height":176,"sizeSlug":"large","linkDestination":"media"} -->
+<div class="wp-block-image"><figure class="alignleft size-large is-resized"><a href="https://khanasif1.files.wordpress.com/2020/12/ui.png"><img src="https://khanasif1.files.wordpress.com/2020/12/ui.png?w=142" alt="" class="wp-image-4818" width="118" height="176"/></a></figure></div>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:paragraph -->
+<p>UI project is a vanilla ASPNET Core MVC project. It basically has four screens as below:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><strong><span class="has-inline-color has-luminous-vivid-orange-color">Home Screen</span>:</strong> It has menu items using which you can navigate to relevant screens</li><li><strong><span class="has-inline-color has-luminous-vivid-orange-color">Product Screen:</span></strong> View gets the data from controller which call the Product API for data feed</li><li><strong><span class="has-inline-color has-luminous-vivid-orange-color">Staff Screen:</span></strong> View gets the data from controller which call the Staff API for data feed</li><li><strong><span class="has-inline-color has-luminous-vivid-orange-color">Sales Screen:</span></strong> View gets the data from controller which call the Sales API for data feed</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>In the Part-2 of this blog series <em><strong><span style="color:#f50505;" class="has-inline-color"><em><strong>"</strong></em>coming soon<em><strong><em><strong>"</strong></em></strong></em></span></strong></em> I will walk through  Yaml files which we will be using to deploy this solution on Azure Kubernetes Services.</p>
+<!-- /wp:paragraph -->
