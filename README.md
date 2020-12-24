@@ -54,3 +54,7 @@ Microservice architecture based kubernetes application
 <!-- wp:paragraph -->
 <p>Staff &amp; Product API is build using ASPNET Core, with openAPI standards. The solution I pretty simple, it has below API’s :</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><span class="has-inline-color has-luminous-vivid-orange-color"><strong>GetMetadata : </strong></span>This is just for internal testing, I would not keep this open if deployed in production. This was just for checking the connection details with DB container. I am pulling the connection details from environment variable, which set through the container deployment Yaml.</li><li><span class="has-inline-color has-luminous-vivid-orange-color"><strong>Get “Get All Staff/Products”: </strong></span>Staff &amp; Product API method does nothing much fancy, below are the activity performed by this API:<ul><li>It builds the database schema if not exists</li><li>It seeds the database with records</li><li>It connects to database and pulls all records.</li><li>It then return the records as a custom entity generic list.</li></ul></li></ul>
+<!-- /wp:list -->
