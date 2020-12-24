@@ -1,6 +1,6 @@
-$myResourceGroup="k8rg"
-$acrId ="msdemoregistry"
-$myAKSCluster="demo-k8cluster"
+$myResourceGroup="**resource group**"
+$acrId ="**ACR name**"
+$myAKSCluster="** Cluster Name**"
 
 <#If az module missing
 Install-PackageProvider -Name NuGet -Force
@@ -51,3 +51,6 @@ kubectl apply -f yaml/product.yaml
 kubectl apply -f yaml/staff.yaml
 kubectl apply -f yaml/sales.yaml
 kubectl apply -f yaml/web.yaml
+
+<#************Ingress************#>
+#kubectl apply -f .\Controller\ingress.yaml
