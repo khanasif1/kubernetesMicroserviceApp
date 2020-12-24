@@ -25,7 +25,7 @@ az aks update -g $myResourceGroup -n $myAKSCluster --attach-acr $acrId
 kubectl config set-context --current --namespace=k8-org
 
 <#************ Staff Sql************#>
-kubectl create secret generic mssql --from-literal=SA_PASSWORD="Redhat0!" -n k8-org
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="**PWD**" -n "**namespace**"
 kubectl get secrets -n k8-org
 kubectl describe mssql
 kubectl delete secret access-tokensecret "mssql"
@@ -37,7 +37,7 @@ kubectl describe pvc mssql-data -n k8-org
 kubectl apply -f yaml/product-sql.yaml
 kubectl apply -f yaml/staff-sql.yaml
 <#************ Product  Sql************#>
-# kubectl create secret generic mssql --from-literal=SA_PASSWORD="Redhat0!" -n k8-org
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="**PWD**" -n "**namespace**"
 # kubectl get secrets -n k8-org
 # kubectl delete secret access-tokensecret "mssql"
 
@@ -51,6 +51,3 @@ kubectl apply -f yaml/product.yaml
 kubectl apply -f yaml/staff.yaml
 kubectl apply -f yaml/sales.yaml
 kubectl apply -f yaml/web.yaml
-
-<#************Ingress************#>
-kubectl apply -f .\Controller\ingress.yaml
