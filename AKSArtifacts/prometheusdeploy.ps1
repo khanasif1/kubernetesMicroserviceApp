@@ -20,7 +20,7 @@ kubectl get deployment
 kubectl describe deployment prometheus-prometheus-oper-operator  > operator.yaml
 
 kubectl get pod
-kubectl logs prometheus-grafana-56d4546b4f-dwc7s -c grafana
+kubectl logs prometheus-grafana-56d4546b4f-q9pvh  -c grafana
 
 kubectl port-forward deployment/prometheus-grafana 3000
 <# Grafana

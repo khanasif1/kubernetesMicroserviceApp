@@ -18,3 +18,10 @@ az aks stop --name demo-k8cluster --resource-group k8rg
 
 #Start an AKS Cluster
 az aks start --name demo-k8cluster --resource-group k8rg
+
+
+#Stop an AKS Cluster
+az aks stop --name akscoach-asif --resource-group rgcoach-asif
+
+#Start an AKS Cluster
+az aks start --name akscoach-asif --resource-group rgcoach-asif

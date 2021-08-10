@@ -13,6 +13,11 @@ Install-Module -Name Az -Repository PSGallery -Force
 az login
 az aks get-credentials --resource-group  k8rg --name demo-k8cluster
 
+kubectl  config view
+kubectl config get-contexts
+kubectl config use-context akscoach-asif
+kubectl config use-context demo-k8cluster
+
 az acr repository list --name msdemoregistry --output table
 
 az aks  browse  --resource-group  k8rg --name $myAKSCluster
