@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+JX0X+7LYe1i9T/iVif4ptNBhmugU/8ucI5zDcxLOAtA1go5RYA1BTW+C91F16N5Iwn1criKcynPAyzNBn6cyg==",
+  "dgSpecHash": "n8aQIKWFZ1uwhz5tGxlGIPhEIJ50mOSoogAhpNGS3rBmDJWRpzARqe/lM3orMtvRS91gnh3IzlqFpq+PTtWMEw==",
   "success": true,
   "projectFilePath": "C:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Service.Product\\k8.kubernetesWorld.Service.Product.csproj",
   "expectedPackageFiles": [

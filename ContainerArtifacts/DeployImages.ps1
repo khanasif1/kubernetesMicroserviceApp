@@ -8,7 +8,7 @@ docker inspect af1bab7bf641 -f "{{json .NetworkSettings.Networks }}"
 docker inspect f82b1449d36d -f "{{json .NetworkSettings.Networks }}"   # f82b1449d36d  
 ######################Employee API DEPLOYMENT###################################
 
-cd C:\_dev\_github\k8.kubernetesWorld\k8.kubernetesWorld.Service.Employee
+cd C:\_dev\_github\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Employee
 docker build -t k8_employee:rc1 .
 docker run -d -p 8081:80  --name employeeservice k8_employee:rc1
 Start-Process "http://localhost:8081/weatherforecast"
@@ -16,7 +16,7 @@ Start-Process "http://localhost:8081/weatherforecast"
 ###########################################################################
 ######################Persistence API DEPLOYMENT###########################
 
-cd C:\_dev\_github\k8.kubernetesWorld\k8.kubernetesWorld.Service.Persistence
+cd C:\_dev\_github\kubernetesMicroserviceApp\k8.kubernetesWorld.Service.Persistence
 docker build -t k8_persistence:rc1 .
 docker run -d -p 8082:80  --name persistservice k8_persistence:rc1
 Start-Process "http://localhost:8082/weatherforecast"
@@ -25,19 +25,33 @@ docker network connect  product_network persistservice
 ###########################################################################
 ##############################Web DEPLOYMENT###############################
 
-cd C:\_dev\_github\k8.kubernetesWorld\k8.kubernetesWorld.Web
-docker build -t k8_web:rc1 .
+cd C:\_dev\_github\kubernetesMicroserviceApp\k8.kubernetesWorld.Web
+docker build -t k8_web:rc2 .
 docker run -d -p 8080:80  --name k8_web k8_web:rc1
 Start-Process "http://localhost:8080/home/index"
+
+docker run -d -p 8080:80  --name k8_web k8_web:rc2
+Start-Process "http://localhost:8080/home/index"
+
+docker tag k8_web:rc2 khanasif1/k8_web:rc1
+docker push khanasif1/k8_web:rc1
+docker pull khanasif1/k8_web:rc1
+docker run -d -p 8080:80  --name k8_web2 khanasif1/k8_web:rc1
+
+
+docker tag k8_web:rc2 khanasif1/k8_web:rc2
+docker push khanasif1/k8_web:rc2
+docker pull khanasif1/k8_web:rc2
+docker run -d -p 8080:80  --name k8_web2 khanasif1/k8_web:rc2
 ###########################################################################
 ########################SQL Docker Hub####################################
 
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Redhat0!" `
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=$$$$" `
    -p 1433:1433 --name sql1 `
    -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
 
 docker exec -it sql1 "bash"
-/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Redhat0!"
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "$$$$"
 SELECT * from sys.Databases
 Select * from INFORMATION_SCHEMA.TABLES
 
@@ -45,7 +59,7 @@ Select * from INFORMATION_SCHEMA.TABLES
 docker network connect  product_network sql1
 ###########################################################################
 ########################Push Docker Hub####################################
-docker login -u=khanasif1 -p=Redhat0!
+docker login -u=$$$$ -p=$$$$
 docker tag k8_client_user:rc2.5 khanasif1/k8_client_user:rc2.5
 docker push khanasif1/k8_client_user:rc2.5
 

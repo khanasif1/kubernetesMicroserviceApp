@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b85c872d-08b0-4882-acbd-ae2b5ec5fabb": {
+      "ProjectGuid": "b85c872d-08b0-4882-acbd-ae2b5ec5fabb",
+      "DisplayName": "k8.kubernetesWorld.Web",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
